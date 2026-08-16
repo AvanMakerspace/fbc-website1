@@ -10,6 +10,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import { Toaster } from "@/components/ui/sonner";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
@@ -84,15 +85,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Refugee-led arts, livelihoods and community development collective in Kakuma Refugee Camp, Kenya.",
       },
       { name: "author", content: "Free Block Creatives" },
-      { property: "og:title", content: "Free Block Creatives" },
-      {
-        property: "og:description",
-        content:
-          "Refugee-led arts, livelihoods and community development collective in Kakuma Refugee Camp, Kenya.",
-      },
+      { property: "og:site_name", content: "Free Block Creatives" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+
     links: [
       {
         rel: "stylesheet",
@@ -135,6 +132,8 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
+      <Toaster richColors position="top-center" />
     </QueryClientProvider>
   );
+
 }

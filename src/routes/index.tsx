@@ -393,6 +393,8 @@ function Index() {
           </div>
         </section>
 
+        <Testimonials />
+
         {/* Contact */}
         <section id="contact" className="scroll-mt-24 px-5 py-20 md:py-28">
           <div className="mx-auto max-w-4xl rounded-3xl surface-ink p-9 text-center md:p-14">
@@ -418,7 +420,18 @@ function Index() {
               </a>
             </div>
           </div>
+
+          <div className="mx-auto mt-8 max-w-4xl rounded-3xl border border-border bg-card p-8 shadow-lift md:p-12">
+            <h3 className="font-display text-2xl font-extrabold sm:text-3xl">Send us a message</h3>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Fill in the form and it reaches the Free Block Creatives team directly.
+            </p>
+            <div className="mt-8">
+              <ContactForm />
+            </div>
+          </div>
         </section>
+
       </main>
 
       <Footer />

@@ -6,8 +6,9 @@ const links = [
   { href: "#about", label: "About" },
   { href: "#programs", label: "Programs" },
   { href: "#who", label: "Who We Serve" },
-  { href: "#structure", label: "Structure" },
+  { href: "#voices", label: "Voices" },
   { href: "#contact", label: "Contact" },
+
 ];
 
 export function Nav() {

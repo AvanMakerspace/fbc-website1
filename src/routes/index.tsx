@@ -15,29 +15,63 @@ import {
 
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
+import { Testimonials } from "@/components/site/Testimonials";
+import { ContactForm } from "@/components/site/ContactForm";
 import hero from "@/assets/hero-performance.jpg";
 import crafts from "@/assets/crafts.jpg";
 import film from "@/assets/film.jpg";
 
+const SITE_URL = "https://fbc-heart-hub.lovable.app";
+const TITLE = "Free Block Creatives | Refugee-Led Arts in Kakuma";
+const DESCRIPTION =
+  "Free Block Creatives is a refugee-led arts, livelihoods and community development collective in Kakuma Refugee Camp, Kenya, creating safe spaces for youth, LGBTQ+ people and gender minorities.";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Free Block Creatives | Refugee-Led Arts in Kakuma" },
+      { title: TITLE },
+      { name: "description", content: DESCRIPTION },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESCRIPTION },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: SITE_URL },
+      { property: "og:site_name", content: "Free Block Creatives" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: TITLE },
+      { name: "twitter:description", content: DESCRIPTION },
+    ],
+    links: [{ rel: "canonical", href: SITE_URL }],
+    scripts: [
       {
-        name: "description",
-        content:
-          "Free Block Creatives is a refugee-led arts, livelihoods and community development collective in Kakuma Refugee Camp, Kenya, creating safe spaces for youth, LGBTQ+ and gender minorities.",
-      },
-      { property: "og:title", content: "Free Block Creatives | Refugee-Led Arts in Kakuma" },
-      {
-        property: "og:description",
-        content:
-          "Arts education, creative production and livelihood skills led by refugees in Kakuma 2, Kenya.",
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "NGO",
+          name: "Free Block Creatives",
+          alternateName: "FBC",
+          description: DESCRIPTION,
+          url: SITE_URL,
+          email: "freeblockcreatives@gmail.com",
+          telephone: "+254117472014",
+          foundingDate: "2025",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Kakuma 2, Kakuma Refugee Camp",
+            addressCountry: "KE",
+          },
+          knowsAbout: [
+            "Arts education",
+            "Film and media production",
+            "Beadwork and textile design",
+            "Refugee livelihoods",
+          ],
+        }),
       },
     ],
   }),
   component: Index,
 });
+
 
 const values = [
   { title: "Inclusion & Diversity", body: "Embracing all identities and backgrounds." },

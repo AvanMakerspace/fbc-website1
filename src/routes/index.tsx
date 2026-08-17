@@ -18,6 +18,7 @@ import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { Testimonials } from "@/components/site/Testimonials";
 import { ContactForm } from "@/components/site/ContactForm";
+import { NewsletterSignup } from "@/components/site/NewsletterSignup";
 import hero from "@/assets/hero-performance.jpg";
 import crafts from "@/assets/crafts.jpg";
 import film from "@/assets/film.jpg";
@@ -424,6 +425,16 @@ function Index() {
             <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-sand/20 px-4 py-2 text-sm opacity-80">
               <MapPin className="size-4" />
               <span>Kakuma 2, Kakuma Refugee Camp, Kenya</span>
+            </div>
+          </div>
+
+          <div className="mx-auto mt-8 max-w-4xl rounded-3xl border border-border bg-card p-8 shadow-lift md:p-12">
+            <h3 className="font-display text-2xl font-extrabold sm:text-3xl">Stay in the loop</h3>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Get FBC updates by email — no message needed, just your address.
+            </p>
+            <div className="mt-6">
+              <NewsletterSignup />
             </div>
           </div>
 

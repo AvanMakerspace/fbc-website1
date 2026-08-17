@@ -11,6 +11,7 @@ import {
   Sparkles,
   Mail,
   Phone,
+  MapPin,
 } from "lucide-react";
 
 import { Nav } from "@/components/site/Nav";

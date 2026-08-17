@@ -18,6 +18,7 @@ import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { Testimonials } from "@/components/site/Testimonials";
 import { ContactForm } from "@/components/site/ContactForm";
+import { NewsletterSignup } from "@/components/site/NewsletterSignup";
 import hero from "@/assets/hero-performance.jpg";
 import crafts from "@/assets/crafts.jpg";
 import film from "@/assets/film.jpg";

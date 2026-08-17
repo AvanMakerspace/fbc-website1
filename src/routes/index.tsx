@@ -11,6 +11,7 @@ import {
   Sparkles,
   Mail,
   Phone,
+  MapPin,
 } from "lucide-react";
 
 import { Nav } from "@/components/site/Nav";
@@ -418,6 +419,11 @@ function Index() {
               >
                 <Phone className="size-4" /> +254 117 472 014
               </a>
+            </div>
+
+            <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-sand/20 px-4 py-2 text-sm opacity-80">
+              <MapPin className="size-4" />
+              <span>Kakuma 2, Kakuma Refugee Camp, Kenya</span>
             </div>
           </div>
 

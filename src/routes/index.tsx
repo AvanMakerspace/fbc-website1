@@ -428,6 +428,16 @@ function Index() {
           </div>
 
           <div className="mx-auto mt-8 max-w-4xl rounded-3xl border border-border bg-card p-8 shadow-lift md:p-12">
+            <h3 className="font-display text-2xl font-extrabold sm:text-3xl">Stay in the loop</h3>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Get FBC updates by email — no message needed, just your address.
+            </p>
+            <div className="mt-6">
+              <NewsletterSignup />
+            </div>
+          </div>
+
+          <div className="mx-auto mt-8 max-w-4xl rounded-3xl border border-border bg-card p-8 shadow-lift md:p-12">
             <h3 className="font-display text-2xl font-extrabold sm:text-3xl">Send us a message</h3>
             <p className="mt-2 text-sm text-muted-foreground">
               Fill in the form and it reaches the Free Block Creatives team directly.

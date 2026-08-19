@@ -1,0 +1,15 @@
+Options -MultiViews
+RewriteEngine On
+
+# Redirect old .html URLs to clean URLs
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html(?:[?\s]) [NC]
+RewriteRule ^ /%1 [R=301,L,NE]
+
+# Serve extensionless routes from their matching HTML files
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.+?)/?$ /$1.html [END]
+
+# Keep the homepage available at /
+DirectoryIndex index.html

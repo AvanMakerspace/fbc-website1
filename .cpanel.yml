@@ -11,4 +11,3 @@ deployment:
     - /bin/cp -f /home/rcchedqz/repositories/fbc-website1/styles.css $DEPLOYPATH
     - /bin/cp -f /home/rcchedqz/repositories/fbc-website1/script.js $DEPLOYPATH
     - /bin/cp -R /home/rcchedqz/repositories/fbc-website1/public/* $DEPLOYPATH
-    - /bin/cp -f /home/rcchedqz/repositories/fbc-website1/.htaccess $DEPLOYPATH
